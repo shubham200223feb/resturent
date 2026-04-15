@@ -1,4 +1,6 @@
-import React from "react"
+import React from "react";
+import Card from "../UI/Card";
+import Mealitem from "./Mealitem";
 const DUMMY_MEALS = [
   {
     id: 'm1',
@@ -27,10 +29,10 @@ const DUMMY_MEALS = [
 ];
 const MealList=()=>{
     const list = DUMMY_MEALS.map((item)=>{
-        return<li>item.name</li>
+        return(<Mealitem key={item.id} name={item.name} price={item.price} description={item.description}/>)
     })
-    return (<>
-    <ul>{list}</ul>
-    </>)
+    return (<section>
+  <Card><ul>{list}</ul></Card>  
+    </section>)
 }
 export default MealList;
