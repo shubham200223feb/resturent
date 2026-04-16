@@ -7,9 +7,9 @@ const Header=()=>{
     <header>
 <h1>Resto App</h1>
 <button className="button">
-    <spam className="icon"><TiShoppingCart /></spam>
-    <spam>Cart</spam>
-    <spam className="badge">3</spam>
+    <span className="icon"><TiShoppingCart /></span>
+    <span>Cart</span>
+    <span className="badge">3</span>
 </button>
     </header>
     <img src={headerimage} alt="this is background image below the header" ></img>
