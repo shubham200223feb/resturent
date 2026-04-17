@@ -9,7 +9,7 @@ return(<li className="meal">
     <div className="description">{props.description}</div>
     <div className="price">{prices}</div>
 </div>
-<div><MealForm/></div>
+<div><MealForm  name={props.name} price={props.price}/></div>
 </li>)
 }
 export default Mealitem;

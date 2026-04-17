@@ -6,9 +6,7 @@ import CartContext from "../../Store/CartContext";
 
 const Header=(props)=>{
     const CartCtx=useContext(CartContext);
-    const Number=CartCtx.items.reduce((curr,item)=>{
-return curr+item.totalamount;
-    },0)
+    const Number=CartCtx.totalamount
     return( <>
     <header>
 <h1>Resto App</h1>
