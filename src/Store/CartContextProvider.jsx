@@ -3,10 +3,14 @@ import CartContext from "./CartContext";
 const CartContextProvider=(props)=>{
     const[cartItem,SetcartItem]= useState([]);
     const addItemHandler=(item)=>{
-        if(item.Quantity>=1){
+        if(item.Quantity!=0){
         SetcartItem((prev)=>{
             return([...prev,item])
         })}
+        else{
+            console.log("this is unwant product ", item.Quantity)
+            return
+        }
     };
     const removeItemHandler=(id)=>{
         const newItem=cartItem.filter((item)=>{
